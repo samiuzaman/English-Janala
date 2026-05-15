@@ -44,7 +44,77 @@
     </style>
   </head>
   <body class="font-primaryFont">
-    
+    <header>
+      <nav
+        class="bg-[#ececec] border-b-2 border-[#C6BDBD] py-4 px-[5%] flex justify-between items-center"
+      >
+        <!-- Logo Container -->
+        <div class="flex items-center gap-1">
+          <span class="font-bold text-black text-lg">English</span>
+          <img src="./assets/logo.png" alt="logo" />
+          <span class="bengaliFont text-lg">জানালা</span>
+        </div>
+        <!-- Button container -->
+        <div class="flex items-center gap-5 text-sm">
+          <button
+            class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
+          >
+            <img class="w-4 h-4" src="./assets/fa-circle-question.png" /> FAQ
+          </button>
+          <button
+            class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
+          >
+            <img class="w-4 h-4" src="./assets/fa-book-open.png" />
+            Learn
+          </button>
+          <button
+            class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
+          >
+            <img class="w-4 h-4" src="./assets/fa-arrow-right-from-bracket.png" />
+            Logout
+          </button>
+        </div>
+      </nav>
+      <!-- Hero Section Code Start Here -->
+      <section
+        class="w-11/12 lg:w-5/6 2xl:w-4/5 mx-auto flex justify-between items-center gap-10 py-8"
+      >
+        <div class="w-full lg:w-1/2 space-y-4">
+          <h1 class="text-4xl 2xl::text-5xl font-extrabold">
+            <span class="text-LightBlueColor">English</span> is Easy!!
+          </h1>
+          <p class="font-bengaliFont">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে
+            চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+          </p>
+          <div class="space-y-3">
+            <input
+              class="outline-1 outline-gray-400 rounded-sm py-2 w-64 pl-3 placeholder:text-gray-400 text-sm"
+              type="name"
+              placeholder="Enter Your Name"
+            />
+            <br />
+            <input
+              class="outline-1 outline-gray-400 rounded-sm py-2 w-64 pl-3 placeholder:text-gray-400 text-sm"
+              type="password"
+              placeholder="****************"
+            />
+            <br />
+            <button
+              class="bg-DarkBlueColor text-white font-medium px-5 py-2 rounded-sm cursor-pointer"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <img src="./assets/hero-student.png" />
+        </div>
+      </section>
+      <!-- Hero Section Code Start Here -->
+    </header>
+
+
     <script src="./script.js"></script>
   </body>
 </html>
