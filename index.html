@@ -122,56 +122,20 @@
         <h2 class="text-3xl 2xl:text-4xl font-extrabold text-center">
         <span class="text-LightBlueColor">Let's</span> Learn Vocabularies
       </h2>
-      <div class="flex justify-center items-center gap-5 text-sm my-10">
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-1
-        </button>
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-2
-        </button>
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-3
-        </button>
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-4
-        </button>
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-5
-        </button>
-        <button
-          class="flex gap-1 items-center border-2 border-DarkBlueColor px-4 py-1 rounded-sm text-DarkBlueColor cursor-pointer hover:bg-[#412ad51b]"
-        >
-          <img class="w-4 h-4" src="./assets/fa-book-open.png" />
-          Lesson-6
-        </button>
+      <div id="lession-btn-container" class="flex justify-center items-center gap-5 text-sm my-10">
       </div>
-      <section class="bg-[#e2e1e1b7] py-8 text-center space-y-2 rounded-lg">
+      <section class="bg-[#e2e1e1b7] p-5 text-center space-y-2 rounded-lg">
         <!-- No Lession Select -->
-        <div>
-          <p class="font-bengaliFont text-grayColor">আপনি এখনো কোন Lesson Select করেন নি।</p>
+        <div id="no-lession-selected">
+          <p class="font-bengaliFont text-grayColor mb-3">আপনি এখনো কোন Lesson Select করেন নি।</p>
           <h4 class="font-bengaliFont font-semibold text-2xl">একটি Lession Select করুন।</h4>
         </div>
         <!-- selected lession container -->
-        <div class=""></div>
+        <div id="selected-lession-container" class="grid grid-cols-3 justify-around gap-6">
+        
+        </div>
       </section>
 </section>
-      
-      
       <!-- FAQ Section Code Start Here -->
        <section id="faq-section" class="py-10">
         <h2 class="text-3xl 2xl:text-4xl font-extrabold text-center my-10"><span class="text-LightBlueColor">Frequently</span> Asked Questions</h2>
@@ -256,6 +220,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
