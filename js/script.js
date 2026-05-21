@@ -1,6 +1,7 @@
 // selected Element
 const lessionBtnContainer = document.getElementById("lession-btn-container");
 const selectedesLessionContainer = document.getElementById("selected-lession-container");
+const noLessionAvailable = document.getElementById("no-lession-avaible");
 
 // Load Lession Category Button
 const loadLessionBtn = () => {
@@ -33,16 +34,29 @@ lessionBtnContainer.addEventListener("click", (e) => {
          // display lesson categories word
         const displaylessonWord = (wordslist) => {
             selectedesLessionContainer.innerText = "";
-        console.log(wordslist);
-        wordslist.forEach(singleWord => {
+            if(wordslist.length > 0){
+            noLessionAvailable.classList.add("hidden");
+            wordslist?.slice(0, 9).forEach(singleWord => {
             const div = document.createElement("div");
             div.classList.add("bg-white", "rounded-lg", "py-6", "space-y-3");
             div.innerHTML = `
             <h3 class="font-semibold text-[21px]">${singleWord?.word}</h3>
             <p class="text-black font-medium text-[19px] font-bengaliFont">"${singleWord?.pronunciation}"</p>
             <p class="text-xl font-bold text-grayColor font-bengaliFont">${singleWord?.meaning}</p>
+            <div class="flex justify-between items-center text-lg px-8 mt-6">
+            <i onClick="modal(${singleWord?.id})" class="relative bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-circle-info"></i>
+            <i class="bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-volume-high"></i>
+            </div>
             `
             selectedesLessionContainer.appendChild(div);
         })
+            } else{
+                noLessionAvailable.classList.remove("hidden");
+            }
+        
     }
      });
+// modal close button
+     const completeBtn = () => {
+        document.getElementById("modal-container").innerText = "";
+    }

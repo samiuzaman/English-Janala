@@ -43,7 +43,7 @@
       }
     </style>
   </head>
-  <body class="font-primaryFont">
+  <body class="font-primaryFont ">
     <header>
       <nav
         class="bg-[#ececec] border-b-2 border-[#C6BDBD] py-4 px-[5%] flex justify-between items-center"
@@ -125,15 +125,26 @@
       <div id="lession-btn-container" class="flex justify-center items-center gap-5 text-sm my-10">
       </div>
       <section class="bg-[#e2e1e1b7] p-5 text-center space-y-2 rounded-lg">
+        <!-- Modal Container -->
+         <section id="modal-container" class="relative flex justify-center items-start">
+          
+         </section>
         <!-- No Lession Select -->
-        <div id="no-lession-selected">
-          <p class="font-bengaliFont text-grayColor mb-3">আপনি এখনো কোন Lesson Select করেন নি।</p>
+        <div id="no-lession-selected" class="py-8 ">
+          <p class="font-bengaliFont text-grayColor mb-4">আপনি এখনো কোন Lesson Select করেন নি।</p>
           <h4 class="font-bengaliFont font-semibold text-2xl">একটি Lession Select করুন।</h4>
         </div>
         <!-- selected lession container -->
         <div id="selected-lession-container" class="grid grid-cols-3 justify-around gap-6">
         
         </div>
+
+        <!-- No Lession Available Section -->
+         <div id="no-lession-avaible" class="hidden flex flex-col justify-center items-center space-y-3">
+          <img src="./assets/alert-error.png" alt="alert image">
+          <p class="font-font-bengaliFont text-grayColor">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+          <h5 class="text-black font-semibold text-2xl font-primaryFont">নেক্সট Lesson এ যান</h5>
+         </div>
       </section>
 </section>
       <!-- FAQ Section Code Start Here -->
@@ -221,5 +232,6 @@
       </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
