@@ -4,7 +4,6 @@ const modal = (id) => {
     
     const displayModalData = (wordData) => {
         const {word,meaning, pronunciation, sentence, synonyms} = wordData || {};
-        const [first, second, third] = synonyms || [];
     const modalContainer = document.getElementById("modal-container");
     const card = document.createElement("div");
     card.classList.add("absolute", "z-10", "w-96", "bg-white", "rounded-lg", "p-6", "text-left", "border-2", "border-borderColor");
@@ -16,9 +15,10 @@ const modal = (id) => {
             <p class="text-grayColor mb-5">${sentence}</p>
             <p class="font-bengaliFont text-lg font-medium mb-2">সমার্থক শব্দ গুলো</p>
             <div id="synonyms-container" class="flex gap-3 mb-5">
-            <span class="bg-[#edf7ffd8] px-4 py-2 text-grayColor rounded-lg"> ${first} </span>
-            <span class="bg-[#edf7ffd8] px-4 py-2 text-grayColor rounded-lg"> ${second} </span>
-            <span class="bg-[#edf7ffd8] px-4 py-2 text-grayColor rounded-lg"> ${third} </span>
+            ${synonyms?.map(synonym => {
+              return `<span class="bg-[#edf7ffd8] px-4 py-2 text-grayColor rounded-lg"> ${synonym} </span>`
+
+            }).join("")}
             </div>
             <button onClick="completeBtn()"
               class="bg-DarkBlueColor text-white font-medium px-5 py-2 rounded-sm cursor-pointer"
