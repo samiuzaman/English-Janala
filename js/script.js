@@ -27,21 +27,6 @@ loadLessionBtn();
 
 lessionBtnContainer.addEventListener("click", (event) => {
     document.getElementById("no-lession-selected").classList.add("hidden");
-        // event.target.classList.remove("bg-red-400");
-        // if(event.target.classList.contains("lession-btn")){
-        //     const slBtn = event.target;
-        //     console.log(slBtn)
-        //     slBtn.classList.add("bg-red-400");
-        // } 
-
-        
-    
-    // btnEl.addEventListener("click", (e) => {
-        //     if(e.target.classList.contains("lession-btn"));{
-            //         const lessionBtn = e.target;
-            //         lessionBtn.classList.add("bg-red-500");
-            //     }
-            // })
 
         // Set Only Selected Lession Button Color=
         const allBtn = document.querySelectorAll(".lession-btn");
@@ -68,7 +53,7 @@ lessionBtnContainer.addEventListener("click", (event) => {
             <p class="text-xl font-bold text-grayColor font-bengaliFont">${singleWord?.meaning  || "no data found"}</p>
             <div class="flex justify-between items-center text-lg px-8 mt-6">
             <i onClick="modal(${singleWord?.id})" class="relative bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-circle-info"></i>
-            <i onClick="pronounceWord(${singleWord.word})" class="bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-volume-high"></i>
+            <i onClick="pronounceWord('${singleWord.word}')" class="bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-volume-high"></i>
             </div>
             `
             selectedesLessionContainer.appendChild(div);
@@ -82,4 +67,11 @@ lessionBtnContainer.addEventListener("click", (event) => {
 // modal close button
      const completeBtn = () => {
         document.getElementById("modal-container").innerText = "";
+    }
+
+    // pronounce the word
+     function pronounceWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-EN'; // English
+      window.speechSynthesis.speak(utterance);
     }
