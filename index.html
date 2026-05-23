@@ -126,7 +126,7 @@
       </div>
       <section class="bg-[#e2e1e1b7] p-5 text-center space-y-2 rounded-lg">
         <!-- Modal Container -->
-         <section id="modal-container" class="relative flex justify-center items-start">
+         <section id="modal-container" class="absolute flex justify-center items-start">
           
          </section>
         <!-- No Lession Select -->
@@ -135,7 +135,7 @@
           <h4 class="font-bengaliFont font-semibold text-2xl">একটি Lession Select করুন।</h4>
         </div>
         <!-- selected lession container -->
-        <div id="selected-lession-container" class="grid grid-cols-3 justify-around gap-6">
+        <div id="selected-lession-container" class="relative grid grid-cols-3 justify-around gap-6">
         
         </div>
 
@@ -159,7 +159,7 @@
             </div>
             <div class="text-xl cursor-pointer">
               <i class="fa-solid fa-minus"></i>
-              <i class="fa-solid fa-plus"></i>
+              <i style="display: none;" class="fa-solid fa-plus"></i>
             </div>
           </div>
           <!-- 2nd FAQ -->
@@ -169,7 +169,7 @@
             <p class="text-grayColor hidden">var is global scope, let and const block scope. var and let can be reassign but const connot be reassign</p>
             </div>
             <div class="text-xl cursor-pointer">
-              <i class="fa-solid fa-minus"></i>
+              <i style="display: none;" class="fa-solid fa-minus"></i>
               <i class="fa-solid fa-plus"></i>
             </div>
           </div>
@@ -180,7 +180,7 @@
             <p class="text-grayColor hidden">var is global scope, let and const block scope. var and let can be reassign but const connot be reassign</p>
             </div>
             <div class="text-xl cursor-pointer">
-              <i class="fa-solid fa-minus"></i>
+              <i style="display: none;"class="fa-solid fa-minus"></i>
               <i class="fa-solid fa-plus"></i>
             </div>
           </div>
@@ -191,7 +191,7 @@
             <p class="text-grayColor hidden">var is global scope, let and const block scope. var and let can be reassign but const connot be reassign</p>
             </div>
             <div class="text-xl cursor-pointer">
-              <i class="fa-solid fa-minus"></i>
+              <i style="display: none;" class="fa-solid fa-minus"></i>
               <i class="fa-solid fa-plus"></i>
             </div>
           </div>
@@ -202,7 +202,7 @@
             <p class="text-grayColor hidden">var is global scope, let and const block scope. var and let can be reassign but const connot be reassign</p>
             </div>
             <div class="text-xl cursor-pointer">
-              <i class="fa-solid fa-minus"></i>
+              <i style="display: none;" class="fa-solid fa-minus"></i>
               <i class="fa-solid fa-plus"></i>
             </div>
           </div>
@@ -233,5 +233,6 @@
     </footer>
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/toggle.js"></script>
   </body>
 </html>
