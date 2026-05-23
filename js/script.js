@@ -52,7 +52,7 @@ lessionBtnContainer.addEventListener("click", (event) => {
             <p class="text-black font-medium text-[19px] font-bengaliFont">"${singleWord?.pronunciation  || "no data found"}"</p>
             <p class="text-xl font-bold text-grayColor font-bengaliFont">${singleWord?.meaning  || "no data found"}</p>
             <div class="flex justify-between items-center text-lg px-8 mt-6">
-            <i onClick="modal(${singleWord?.id})" class="relative bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-circle-info"></i>
+            <i onClick="modal(${singleWord?.id})" class="open-modal relative bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-circle-info"></i>
             <i onClick="pronounceWord('${singleWord.word}')" class="bg-[#4a92ca27] p-2 cursor-pointer rounded-md fa-solid fa-volume-high"></i>
             </div>
             `

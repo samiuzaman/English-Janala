@@ -1,11 +1,17 @@
 const modal = (id) => {
-    const url = `https://openapi.programming-hero.com/api/word/${id}`;
-    fetch(url).then(res => res.json()).then(data => displayModalData(data.data));
+    document.getElementById("modal-container").classList.add = "hidden";
     
-    const displayModalData = (wordData) => {
+    document.getElementById("selected-lession-container").addEventListener("click", (event) => {
+      
+        if(event.target.classList.contains("open-modal")){
+          const url = `https://openapi.programming-hero.com/api/word/${id}`;
+    fetch(url).then(res => res.json()).then(data => displayModalData(data.data));
+          const displayModalData = (wordData) => {
         const {word,meaning, pronunciation, sentence, synonyms} = wordData || {};
     const modalContainer = document.getElementById("modal-container");
     const card = document.createElement("div");
+    modalContainer.style.left = event.pageX + "px";
+    modalContainer.style.top = event.pageY + "px";
     card.classList.add("absolute", "z-10", "w-96", "bg-white", "rounded-lg", "p-6", "text-left", "border-2", "border-borderColor");
     card.innerHTML = `
             <h4 class="text-2xl font-semibold mb-5">${word} (<i class="fa-solid fa-microphone-lines"></i> : <span class="font-bengaliFont">${pronunciation}</span>)</h4>
@@ -28,5 +34,9 @@ const modal = (id) => {
     `
     modalContainer.appendChild(card);
     }
+                }
+    })
+    
+    
     
 }
